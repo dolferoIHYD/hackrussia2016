@@ -1,0 +1,12 @@
+{% for a in arrivals %}
+  <p>
+    Прибытие:
+    {{ a.time }}
+  </p>
+{% endfor %}
+{% for d in deports %}
+  <p>
+    Отбытие:  
+    {{ d.time }}
+  </p>
+{% endfor %}

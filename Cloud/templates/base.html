@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>index</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+  </head>
+  <body>
+    <!-- Simple header with fixed tabs. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+                mdl-layout--fixed-tabs">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">GACC</span>
+        </div>
+        <!-- Tabs -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+          <a href="#fixed-tab-1" class="mdl-layout__tab is-active">По номеру</a>
+          <a href="#fixed-tab-2" class="mdl-layout__tab">По водителю</a>
+          <a href="#fixed-tab-3" class="mdl-layout__tab">По дню</a>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">ГАКК</span>
+      </div>
+      <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+          <div class="page-content">
+            <form class="" action="" method="post">
+              {% csrf_token %}
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="state_number" name='number'>
+                <label class="mdl-textfield__label" for="state_number">Номер</label>
+                <input  class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="button"  value="Искать">
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+          <div class="page-content">
+            <form class="" action="" method="post">
+              {% csrf_token %}
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="driver" name='name'>
+                <label class="mdl-textfield__label" for="driver">ФИ водителя</label>
+                <input  class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="button"  value="Искать">
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+          <div class="page-content">
+            <form class="" action="" method="post">
+              {% csrf_token %}
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="yr" name='year'>
+                <label class="mdl-textfield__label" for="yr">Год</label>
+                <input class="mdl-textfield__input" type="text" id="mh" name='month'>
+                <label class="mdl-textfield__label" for="mh">Месяц</label>
+                <input class="mdl-textfield__input" type="text" id="dy" name='day'>
+                <label class="mdl-textfield__label" for="dy">День</label>
+                <input  class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="button"  value="Искать">
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
