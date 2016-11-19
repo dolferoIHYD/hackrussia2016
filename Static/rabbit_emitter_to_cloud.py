@@ -10,7 +10,7 @@ channel = connection.channel()
 # fanout - копирует сообщение во все очереди
 channel.exchange_declare(exchange='tokens', type='fanout')
 
-message = ' '.join(sys.argv[1:]) or 'Hello World!'
+message = ' '.join(sys.argv[1:]) or 'aaa'
 channel.basic_publish(exchange='tokens',
                         routing_key='',
                         body=message
