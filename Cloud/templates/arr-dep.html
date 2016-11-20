@@ -1,12 +1,16 @@
+<div style="width: 49%; text-align: center;  display: inline-block; height: 100%;">
 {% for a in arrivals %}
   <p>
     Прибытие:
     {{ a.time }}
   </p>
 {% endfor %}
+</div>
+<div style="width: 49%; display: inline-block; height: 100%; text-align: center;">
 {% for d in deports %}
   <p>
-    Отбытие:  
+    Отбытие:
     {{ d.time }}
   </p>
 {% endfor %}
+</div>

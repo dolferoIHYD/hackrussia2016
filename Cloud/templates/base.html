@@ -5,9 +5,34 @@
     <title>index</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <style type="text/css">
+    
+    .findbutton{
+      position: relative;
+      width: 20%;
+      display: inline-block;
+      margin-left: 70%;
+    }
+    .div_tab{
+      width: 50%;
+      margin-left: 25%;
+    }
+    .text_find{
+      width: 80%;
+    }
+    .date_tab{
+      width: 100%;
+    }
+    .datein{
+      width: 15%;
+      padding: 0 2.5%;
+      display: inline-block;
+    }
+  </style>
   </head>
   <body>
+
     <!-- Simple header with fixed tabs. -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
                 mdl-layout--fixed-tabs">
@@ -31,10 +56,10 @@
           <div class="page-content">
             <form class="" action="" method="post">
               {% csrf_token %}
-              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="state_number" name='number'>
-                <label class="mdl-textfield__label" for="state_number">Номер</label>
-                <input  class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="button"  value="Искать">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label div_tab">
+                <input class="mdl-textfield__input text_find" type="text" id="state_number" name='number'>
+                <label class="mdl-textfield__label text_find" for="state_number">Номер</label>
+                <input  class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored findbutton" type="button"  value="Искать">
               </div>
             </form>
           </div>
@@ -43,10 +68,10 @@
           <div class="page-content">
             <form class="" action="" method="post">
               {% csrf_token %}
-              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="driver" name='name'>
-                <label class="mdl-textfield__label" for="driver">ФИ водителя</label>
-                <input  class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="button"  value="Искать">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label div_tab">
+                <input class="mdl-textfield__input text_find" type="text" id="driver" name='name'>
+                <label class="mdl-textfield__label text_find" for="driver">ФИ водителя</label>
+                <input  class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored findbutton" type="button"  value="Искать">
               </div>
             </form>
           </div>
@@ -55,13 +80,10 @@
           <div class="page-content">
             <form class="" action="" method="post">
               {% csrf_token %}
-              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" id="yr" name='year'>
-                <label class="mdl-textfield__label" for="yr">Год</label>
-                <input class="mdl-textfield__input" type="text" id="mh" name='month'>
-                <label class="mdl-textfield__label" for="mh">Месяц</label>
-                <input class="mdl-textfield__input" type="text" id="dy" name='day'>
-                <label class="mdl-textfield__label" for="dy">День</label>
+              <div class="div_tab" style="margin: auto;">
+                <input class="datein" style="margin: 0 0 0 5%" placeholder="Год" type="text" id="yr" name='year'>
+                <input class="datein" placeholder="Месяц" type="text" id="mh" name='month'>
+                <input class="datein" placeholder="День" type="text" id="dy" name='day'>
                 <input  class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="button"  value="Искать">
               </div>
             </form>
