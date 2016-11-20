@@ -3,7 +3,7 @@ import pika
 import subprocess
 
 credentials = pika.PlainCredentials('guest', 'guest')
-parameters = pika.ConnectionParameters('0.0.0.0', 5672, )
+parameters = pika.ConnectionParameters('localhost', 5672)
 connection = pika.BlockingConnection(parameters)
 channel = connection.channel()
 
